@@ -1,0 +1,24 @@
+[package]
+name = "tera"
+version = "0.1.0"
+edition = "2018"
+authors = ["Stephen Akinyemi <steve@gigamono.com>"]
+description = "A capabilities-based secure JavaScript runtime"
+readme = "README.md"
+repository = "https://github.com/gigamono/tera"
+keywords = ["no-code", "capabilities", "runtime", "serverless", "deno"]
+categories = ["development-tools", "web-programming"]
+documentation = "https://github.com/gigamono/tera"
+homepage = "https://gigamono.com"
+license = "Apache-2.0"
+license-file = "LICENSE"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+utilities = { path = "../utilities" }
+deno_core = "0.103.0"
+tokio = { version = "1", features = ["full"] }
+
+[lib]
+name = "tera"
+path = "lib/lib.rs"

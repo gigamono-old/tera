@@ -10,14 +10,17 @@ keywords = ["no-code", "capabilities", "runtime", "serverless", "deno"]
 categories = ["development-tools", "web-programming"]
 documentation = "https://github.com/gigamono/tera"
 homepage = "https://gigamono.com"
-license = "Apache-2.0"
 license-file = "LICENSE"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 utilities = { path = "../utilities" }
-deno_core = "0.103.0"
+v8 = "0.33.0"
 tokio = { version = "1", features = ["full"] }
+
+[[bin]]
+name = "test"
+path = "bin/test.rs"
 
 [lib]
 name = "tera"
